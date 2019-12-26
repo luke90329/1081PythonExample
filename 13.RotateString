@@ -1,0 +1,7 @@
+times = eval(input())
+for i in range(times):
+    a,b = map(str,input().split())
+    if int(a) > 0:
+        print(b[int(a):]+b[:int(a)])
+    else:
+        print(b[int(a):]+b[:-6])
