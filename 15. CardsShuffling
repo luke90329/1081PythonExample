@@ -1,0 +1,15 @@
+#產生牌組
+r = ['A','2','3','4','5','6','7','8','9','T','J','Q','K']
+s = ['C','D','H','S']
+n = []
+for i in s:
+ for j in r:
+    n.append(i+j)
+
+arr = [(int(x) % 52) for x in input().split()]  #輸入並處理洗牌數列(取52的餘數)
+num = 0
+for i in arr:  #依照洗牌數列進行牌組交換
+    n[num], n[i] = n[i], n[num]
+    num += 1
+for i in n:    #輸出完成之牌組
+    print(i,end=' ')
